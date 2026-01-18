@@ -1,35 +1,22 @@
 .PHONY: all clean
 
-# Default target
 all: README.md
 
-# Count lines in guessinggame.sh
-GUESSINGGAME_LINES := $(shell wc -l < guessinggame.sh)
-
-# Generate README.md
 README.md: guessinggame.sh
-	@echo "# Guessing Game Project" > README.md
-	@echo "" >> README.md
+	@echo "# The Unix Workbench Course Peer-Graded Assignment" > README.md
+	@echo "by Johns Hopkins University on coursera.org." >> README.md
 	@echo "**Author:** Ilyass Salim" >> README.md
 	@echo "" >> README.md
-	@echo "## Project Description" >> README.md
-	@echo "This is a Bash shell game where the user tries to guess the number of files in the current directory." >> README.md
+	@echo "## Description" >> README.md
+	@echo "make a program called guessinggame.sh. This program should continuously ask the user to guess the number of files in the current directory, until they guess the correct number. The user is informed if their guess is too high or too low. Once the user guesses the correct number of files in the current directory they should be congratulated." >> README.md
 	@echo "" >> README.md
-	@echo "## Make Execution Details" >> README.md
-	@echo "- **Date and Time:** $$(date)" >> README.md
-	@echo "- **Lines of code in guessinggame.sh:** $(GUESSINGGAME_LINES)" >> README.md
+	@echo "## Make date: $$(date)" >> README.md
+	@echo "## Number of lines in guessinggame.sh: $$(wc -l < guessinggame.sh)" >> README.md
 	@echo "" >> README.md
-	@echo "## How to Play" >> README.md
-	@echo "1. Run the game with: \`bash guessinggame.sh\`" >> README.md
-	@echo "2. Enter your guess when prompted" >> README.md
-	@echo "3. You'll be told if your guess is too high or too low" >> READ.md
-	@echo "4. Keep guessing until you get the right answer!" >> README.md
+	@echo "KUDOS!!!" >> README.md
 	@echo "" >> README.md
-	@echo "## Files in this project" >> README.md
-	@echo "- \`guessinggame.sh\` - The main game script" >> README.md
-	@echo "- \`Makefile\` - Build automation file" >> README.md
-	@echo "- \`README.md\` - This documentation file (auto-generated)" >> README.md
+	@echo "Warm Regards," >> README.md
+	@echo "Ilyass Salim" >> README.md
 
-# Clean up (remove README.md)
 clean:
 	rm -f README.md
